@@ -1,3 +1,38 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header, Content, Footer */
+.header, .content, .footer {
+    width: 100%;
+    padding: 1em;
+    background: #f4f4f4;
+    margin-bottom: 1em;
+}
+
+/* Flexbox Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 1em;
+    background: #e2e2e2;
+    margin: 0.5em;
+}
+
 body {
 font-family: Arial, sans-serif;
 margin: 0;
@@ -201,28 +236,37 @@ html {
     box-sizing: border-box;
 }
 
-#photos .column {
-    width: 20;
-    padding: 5px;
-    float: left;
+
+/* Photos Section */
+#photos {
+    padding: 20px;
 }
 
-/* Clearfix (clear floats) */
-#photos .row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+    #photos h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-.column {
-width: 33.33%;
-padding: 5px;
-float: left;
-}
+    #photos .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Modern way to handle spacing between items */
+    }
 
-/* Clearfix (clear floats) */
-.row::after {
-content: "";
-clear: both;
-display: table;
+    #photos .column {
+        flex: 1 1 calc(33.33% - 10px); /* Adjust for gap spacing */
+        padding: 5px;
+    }
+
+    #photos img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #photos .column {
+        flex: 1 1 calc(100% - 10px); /* Stack columns vertically */
+    }
 }
