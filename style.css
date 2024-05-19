@@ -35,6 +35,7 @@
 
 body {
 font-family: "Segoe Print", sans-serif;
+color:midnightblue;
 padding-top: 50px; /* Add padding to body to prevent content from being hidden under the fixed menu */
 margin: 0;
 padding: 0;
@@ -46,7 +47,7 @@ padding: 0;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: midnightblue;
     padding: 10px 0;
     z-index: 1000;
 }
@@ -71,7 +72,7 @@ padding: 0;
         }
 
             #menu li a:hover {
-                background-color: #555;
+                background-color: darkblue;
             }
 
 
@@ -174,15 +175,6 @@ height: 225px;
 
 
 
-
-
-
-
-
-
-
-
-
 /* Global styles */
 html {
     box-sizing: border-box;
@@ -207,19 +199,21 @@ html {
     }
 
 .title {
-    color: grey;
+    color: palevioletred;
 }
 
 .button {
+    font-size: 2em
+    font-family: 'Segoe Print', sans-serif;
     border: none;
     outline: 0;
     display: inline-block;
     padding: 5px 8px; /* Adjusted padding */
     color: white;
-    background-color: #000;
+    background-color: cornflowerblue;
     text-align: center;
     cursor: pointer;
-    width: 50%;
+    width: 10%;
 }
 
 .button:hover {
