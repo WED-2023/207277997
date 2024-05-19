@@ -117,35 +117,29 @@
         <h2>Give Me a Like</h2>
         <p>Page Views: <span id="view-count">0</span></p>
         <button id="like-button">Like</button> <span id="like-count">0</span> Likes
+        <span id="likeCount">0</span>
+
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-            const viewCountElement = document.getElementById('view-count');
-            const likeCountElement = document.getElementById('like-count');
-            const likeButton = document.getElementById('like-button');
+            // Function to get like count from local storage
+            function getLikeCount() {
+                return parseInt(localStorage.getItem('likeCount')) || 0;
+            }
 
-            // Initialize page views
-                fetch('https://api.countapi.xyz/hit/namespace=wed-2023.github.io/assignment1-shirmor/views')
-                .then(response => response.json())
-                .then(data => {
-                    viewCountElement.textContent = data.value;
-                });
+            // Function to set like count in local storage
+            function setLikeCount(count) {
+                localStorage.setItem('likeCount', count);
+                document.getElementById('likeCount').textContent = count;
+            }
 
-            // Initialize likes
-                fetch('https://api.countapi.xyz/get/wed-2023.github.io/assignment1-shirmor/likes')
-                .then(response => response.json())
-                .then(data => {
-                    likeCountElement.textContent = data.value;
-                });
+            // Initialize like count
+            setLikeCount(getLikeCount());
 
-            // Like button functionality
-            likeButton.addEventListener('click', () => {
-                fetch('https://api.countapi.xyz/hit/wed-2023.github.io/assignment1-shirmor/likes')
-                    .then(response => response.json())
-                    .then(data => {
-                        likeCountElement.textContent = data.value;
-                    });
+            // Increment like count when like button is clicked
+            document.getElementById("like-button").addEventListener("click", () => {
+                let currentCount = getLikeCount();
+                currentCount++;
+                setLikeCount(currentCount);
             });
-        });
         </script>
 
         <br />
