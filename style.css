@@ -203,21 +203,21 @@ html {
 }
 
 .button {
-    font-size: 2em
+    font-size: 1.3em;
     font-family: 'Segoe Print', sans-serif;
     border: none;
     outline: 0;
     display: inline-block;
     padding: 5px 8px; /* Adjusted padding */
     color: white;
-    background-color: cornflowerblue;
+    background-color: mediumvioletred;
     text-align: center;
     cursor: pointer;
     width: 10%;
 }
 
 .button:hover {
-    background-color: #555;
+    background-color: lightpink;
 }
 
 /* Adjusting styles for the contact section */
