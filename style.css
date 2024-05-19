@@ -36,7 +36,6 @@
 body {
 font-family: "Segoe Print", sans-serif;
 color:midnightblue;
-padding-top: 50px; /* Add padding to body to prevent content from being hidden under the fixed menu */
 margin: 0;
 padding: 0;
 }
@@ -93,6 +92,27 @@ padding: 0; /* Remove any default padding */
 }
 
 
+/* Style box areas */
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style box areas */
+.box {
+    display: inline-block; /* Display boxes inline */
+    width: calc(33.33% - 40px); /* Set width of each box to one-third of the container width */
+    background-color: lightblue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    vertical-align: top; /* Align boxes to the top */
+    box-sizing: border-box;
+    font-family: 'Segoe UI',sans-serif;
+}
+
 
 .about-text {
 text-align: center;
@@ -116,42 +136,6 @@ border: 1px solid #ccc;
 border-radius: 5px;
 background-color: #f9f9f9;
 }
-
-/* Style the form labels */
-/* label {
-display: block;
-margin-bottom: 5px;
-}
-
-input[type="email"],
-textarea {
-width: 100%;
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
-box-sizing: border-box; /* Ensure padding and border are included in the width 
-}
-
-button {
-display: block;
-width: 100%;
-padding: 10px;
-background-color: #007bff;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s;
-}
-
-Hover effect for the button 
-button:hover {
-    background-color: #0056b3;
-}*/
-
-
-
 
 /* Video Container */
 .video-container {
@@ -213,7 +197,7 @@ html {
     background-color: mediumvioletred;
     text-align: center;
     cursor: pointer;
-    width: 10%;
+    width: 20%;
 }
 
 .button:hover {
@@ -287,3 +271,4 @@ html {
         flex: 1 1 calc(100% - 10px); /* Stack columns vertically */
     }
 }
+
