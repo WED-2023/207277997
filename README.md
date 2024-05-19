@@ -1,1 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/GmyrjvXu)
+The site is about my grandmother, Tamara Babayeva.
+She is currently dealing with a complex medical situation, and I hope the site would cheer her up.
+My ID is 207277997
+The website's URL is https://wed-2023.github.io/207277997/ 
