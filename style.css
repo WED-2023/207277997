@@ -5,11 +5,20 @@
     box-sizing: border-box;
 }
 
+/* Global styles */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0px;
 }
 
 /* Header, Content, Footer */
@@ -19,7 +28,12 @@
     background: #f4f4f4;
     margin-bottom: 1em;
 }
-
+/* Style box areas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* Flexbox Grid */
 .row {
     display: flex;
@@ -92,13 +106,7 @@ padding: 0; /* Remove any default padding */
 }
 
 
-/* Style box areas */
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* Style box areas */
 .box {
@@ -157,17 +165,6 @@ height: 225px;
 }
 
 
-
-
-/* Global styles */
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -176,11 +173,11 @@ html {
     padding: 0 16px;
 }
 
-    .container::after, .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 .title {
     color: palevioletred;
